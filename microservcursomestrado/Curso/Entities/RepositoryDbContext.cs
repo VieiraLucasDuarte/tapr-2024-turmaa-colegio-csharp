@@ -16,18 +16,16 @@ namespace microservcursomestrado.Curso.Entities
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseCosmos(
-                connectionString: this._configuration["CosmosDBURL"],
-                databaseName: this._configuration["CosmosDBDBName"],
-                cosmosOptionsAction: options =>
+            connectionString: this._configuration["CosmosDBURL"],
+            databaseName: this._configuration["CosmosDBDBName"],
+            cosmosOptionsAction: options =>
+            {
+                options.ConnectionMode(ConnectionMode.Gateway);
+                options.HttpClientFactory(() => new HttpClient(new HttpClientHandler()
                 {
-                    options.ConnectionMode(ConnectionMode.Gateway);
-                    options.HttpClientFactory(() => new HttpClient(new HttpClientHandler()
-                    {
-                        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-                    }));
-                }
-
-         );
+                    ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                }));
+            });
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

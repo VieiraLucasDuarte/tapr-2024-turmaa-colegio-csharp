@@ -1,0 +1,8 @@
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.csproj.AssemblyReference.cache
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.AssemblyInfoInputs.cache
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.AssemblyInfo.cs
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.csproj.CoreCompileInputs.cache
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.MvcApplicationPartsAssemblyInfo.cs
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.MvcApplicationPartsAssemblyInfo.cache
+/workspaces/tapr-2024-turmaa-colegio-csharp/microservcursomestrado/obj/Debug/net8.0/microservcursomestrado.sourcelink.json

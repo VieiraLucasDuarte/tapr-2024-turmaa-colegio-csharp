@@ -1,0 +1,11 @@
+##BUSCAR TODOS OS CURSOS
+
+GET http://localhost:5075/api/v1/aluno
+
+## Insreir um curso
+
+Post http://localhost:5075/api/v1/aluno
+Content-Type: application/json
+{
+    "nome": "Lucas"
+}
