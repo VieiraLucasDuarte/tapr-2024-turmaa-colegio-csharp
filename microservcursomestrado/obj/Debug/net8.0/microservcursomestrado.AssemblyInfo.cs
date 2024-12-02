@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("microservcursomestrado")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20fcf96c6b9a8d9e7b5b5c3105a1050b91d3e3a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fffbbbf823834e8823db3b6fa9a8c7bec80597f")]
 [assembly: System.Reflection.AssemblyProductAttribute("microservcursomestrado")]
 [assembly: System.Reflection.AssemblyTitleAttribute("microservcursomestrado")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

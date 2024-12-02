@@ -8,6 +8,7 @@ namespace microservcursomestrado.Disciplina.Entities
     {
         public DbSet<Disciplina> Disciplina { get; set; }
         public DbSet<Horario> Horario { get; set; }
+        public DbSet<Aula> Aula { get; set; }
 
         private IConfiguration _configuration;
         public RepositoryDbContext(IConfiguration configuration)
