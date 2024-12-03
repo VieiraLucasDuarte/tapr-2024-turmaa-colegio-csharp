@@ -9,6 +9,7 @@ namespace microservcursomestrado.Disciplina.Entities
         public DbSet<Disciplina> Disciplina { get; set; }
         public DbSet<Horario> Horario { get; set; }
         public DbSet<Aula> Aula { get; set; }
+        public DbSet<Nota> Nota { get; set; }
 
         private IConfiguration _configuration;
         public RepositoryDbContext(IConfiguration configuration)
@@ -50,6 +51,18 @@ namespace microservcursomestrado.Disciplina.Entities
             .HasValueGenerator<GuidValueGenerator>();
             modelBuilder.Entity<Horario>()
                 .HasPartitionKey(h => h.IdDisciplina);
+
+            modelBuilder.Entity<Aula>()
+            .HasNoDiscriminator()
+            .ToContainer("aula")
+            .Property(h => h.Id)
+            .HasValueGenerator<GuidValueGenerator>();
+
+            modelBuilder.Entity<Nota>()
+            .HasNoDiscriminator()
+            .ToContainer("nota")
+            .Property(h => h.Id)
+            .HasValueGenerator<GuidValueGenerator>();
         }
     }
 }
