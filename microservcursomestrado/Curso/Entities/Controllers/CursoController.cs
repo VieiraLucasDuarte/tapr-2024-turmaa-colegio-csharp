@@ -26,7 +26,7 @@ namespace microservcursomestrado.Curso.Entities.Controllers
             return Results.Ok(listaAlunos);
         }
 
-        [HttpPost]
+        [HttpPost("/create")]
         public async Task<IResult> Post(Curso curso)
         {
             if (curso == null)

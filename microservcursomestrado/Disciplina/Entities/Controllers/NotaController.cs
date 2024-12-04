@@ -22,7 +22,7 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
             return Results.Ok(nota);
         }
 
-        [HttpPost("create/nota")]
+        [HttpPost("create")]
         public async Task<IResult> CreateNota([FromBody] NotaCommand command)
         {
             var result = _service.CreateNota(command);

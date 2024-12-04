@@ -1,11 +1,107 @@
-##BUSCAR TODOS OS CURSOS
-
-GET http://localhost:5075/api/v1/aluno
-
-## Insreir um curso
-
-Post http://localhost:5075/api/v1/aluno
+#CURSO
+GET http://localhost:5075/api/v1/curso
+Post http://localhost:5075/api/v1/curso/create
 Content-Type: application/json
 {
-    "nome": "Lucas"
+  "Name": "Introdução à Programação"
 }
+
+PUT http://localhost:5075/api/v1/curso/d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c
+
+Content-Type: application/json
+{
+  "Id": "d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c",
+  "Name": "Desenvolvimento de Sistemas"
+}
+
+DELETE http://localhost:5075/api/v1/curso/d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c
+
+#AULA
+GET http://localhost:5075/api/v1/aula
+
+POST http://localhost:5075/api/v1/aula/create
+Content-Type: application/json
+{
+  "IdAluno": "aluno456",
+  "IdDiario": "diario789",
+  "Date": "2024-12-04T10:30:00",
+  "Presenca": true
+}
+
+PUT http://localhost:5075/api/v1/aula/update
+Content-Type: application/json
+{
+  "IdAula": "aula123",
+  "IdAluno": "aluno456",
+  "IdDiario": "diario789",
+  "Date": "2024-12-04T10:30:00",
+  "Presenca": true
+}
+
+DELETE http://localhost:5075/api/v1/aula/delete/d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c
+
+#DISCIPLINA
+
+GET http://localhost:5075/api/v1/disciplina
+
+POST http://localhost:5075/api/v1/disciplina/create
+Content-Type: application/json
+{
+  "IdCurso": "curso456",
+  "Name": "Matemática Aplicada",
+  "HorarioCommand": {
+    "DiaSemana": "Segunda-feira",
+    "HoraInicio": "08:00",
+    "HoraFim": "10:00"
+  }
+}
+
+PUT http://localhost:5075/api/v1/disciplina/update
+Content-Type: application/json
+{
+  "Id": "disciplina123",
+  "IdCurso": "curso456",
+  "Name": "Matemática Aplicada",
+  "HorarioCommand": {
+    "DiaSemana": "Segunda-feira",
+    "HoraInicio": "08:00",
+    "HoraFim": "10:00"
+  }
+}
+
+DELETE http://localhost:5075/api/v1/disciplina/delete/d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c
+
+#HORARIO
+PUT http://localhost:5075/api/v1/disciplina/update/horario
+Content-Type: application/json
+{
+  "Id": "horario789",
+  "DtInicio": "2024-01-15T08:00:00",
+  "DtFim": "2024-01-15T10:00:00",
+  "IdDisciplina": "disciplina123",
+  "Sala": "Sala 202"
+}
+
+DELETE http://localhost:5075/api/v1/disciplina/delete/horario/d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c
+
+#NOTA
+GET http://localhost:5075/api/v1/nota
+
+POST http://localhost:5075/api/v1/nota/create
+Content-Type: application/json
+{
+  "Tipo": 1,
+  "NotaParcial": 7.5,
+  "Peso": 0.4
+}
+
+PUT http://localhost:5075/api/v1/nota/update
+Content-Type: application/json
+{
+  "Tipo": 1,
+  "NotaParcial": 7.5,
+  "Peso": 0.4
+}
+
+DELETE http://localhost:5075/api/v1/nota/delete/d6e5f6a7-8b3a-4e21-9e17-2b9c0d5a7f1c
+

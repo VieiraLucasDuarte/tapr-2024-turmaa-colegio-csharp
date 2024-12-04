@@ -27,14 +27,14 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
             return Results.Ok(disciplina);
         }
 
-        [HttpPost("create/disciplina")]
+        [HttpPost("create")]
         public async Task<IResult> Create([FromBody] DisciplinaCommad command)
         {
             var result = _service.CreateDisciplina(command);
             return Results.Ok(result);
         }
 
-        [HttpPost("update/disciplina")]
+        [HttpPut("update")]
         public async Task<IResult> UpdateDisciplina([FromBody] DisciplinaCommad command)
         {
             if (command == null || command.Id.Equals(string.Empty))
@@ -50,7 +50,7 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
             return Results.Ok(disciplina);
         }
 
-        [HttpPost("update/horario")]
+        [HttpPut("update/horario")]
         public async Task<IResult> UpdateHorario([FromBody] HorarioCommand command)
         {
             if (command == null || command.Id.Equals(string.Empty))
@@ -66,7 +66,7 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
             return Results.Ok(horario);
         }
 
-        [HttpDelete("delete/disciplina/{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IResult> DeleteDisciplina(string id)
         {
             if (id.Equals(id))

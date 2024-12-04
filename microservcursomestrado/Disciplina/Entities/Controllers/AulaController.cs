@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace microservcursomestrado.Disciplina.Entities.Controllers
 {
     [ApiController]
-    [Route("/api/v1/aula")]
+    [Route("/api/v1/aula/")]
     public class AulaController : ControllerBase
     {
         private IAulaService _service;
@@ -23,7 +23,7 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
             return Results.Ok(aula);
         }
 
-        [HttpPost("create/aula")]
+        [HttpPost("create")]
         public async Task<IResult> CreateNota([FromBody] AulaCommand command)
         {
             var result = _service.CreateAula(command);
@@ -31,7 +31,7 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
         }
 
 
-        [HttpPost("update/aula")]
+        [HttpPost("update")]
         public async Task<IResult> UpdateAula([FromBody] AulaCommand command)
         {
             if (command == null || command.IdAula.Equals(string.Empty))
@@ -47,7 +47,7 @@ namespace microservcursomestrado.Disciplina.Entities.Controllers
             return Results.Ok(aula);
         }
 
-        [HttpDelete("delete/aula/{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IResult> DeleteAula(string id)
         {
             if (id.Equals(id))
